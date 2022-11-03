@@ -14,9 +14,9 @@ const routes: Array<RouteConfig> = [
     path: '/game',
     name: 'game',
     // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
+    // this generates a separate chunk (game.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/VGame.vue')
+    component: () => import(/* webpackChunkName: "game" */ '../views/VGame.vue')
   }
 ]
 
