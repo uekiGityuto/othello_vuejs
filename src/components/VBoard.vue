@@ -22,9 +22,9 @@ export default class VBoard extends Vue {
 
   put(cell: Cell): void {
     if (this.board.put(cell, this.turn)) {
-      this.$emit("changeTurn", true);
+      this.$emit("doAfterPut", true);
     } else {
-      this.$emit("changeTurn", false);
+      this.$emit("doAfterPut", false);
     }
   }
 }

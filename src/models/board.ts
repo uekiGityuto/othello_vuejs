@@ -27,6 +27,26 @@ export default class Board {
         return true;
     }
 
+    countBlack(): number {
+        let num = 0;
+        this._rows.forEach(row => row.cells.forEach(cell => {
+            if (cell.isBlack()) {
+                num += 1;
+            }
+        }))
+        return num;
+    }
+
+    countWhite(): number {
+        let num = 0;
+        this._rows.forEach(row => row.cells.forEach(cell => {
+            if (cell.isWhite()) {
+                num += 1;
+            }
+        }))
+        return num;
+    }
+
     private refCell(x: number, y: number): Cell | null {
         if (x < 0 || x > 7 || y < 0 || y > 7) {
             return null;
