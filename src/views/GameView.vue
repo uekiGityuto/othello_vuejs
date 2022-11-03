@@ -16,7 +16,7 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import VBoard from "./VBoard.vue";
+import VBoard from "../components/VBoard.vue";
 import { BLACK, Color } from "../models/color";
 import Board from "../models/board";
 import Game from "../models/game";
