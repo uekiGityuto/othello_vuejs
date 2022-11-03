@@ -5,7 +5,7 @@ export default class Cell {
     private _y: number;
     private _cellState: Color | null;
 
-    constructor(x:number, y: number) {
+    constructor(x: number, y: number) {
         this._x = x;
         this._y = y;
         this._cellState = null;
@@ -33,5 +33,19 @@ export default class Cell {
 
     put(color: Color): void {
         this._cellState = color;
+    }
+
+    reverse() {
+        switch (this._cellState) {
+            case BLACK:
+                this._cellState = WHITE;
+                return;
+            case WHITE:
+                this._cellState = BLACK;
+                return;
+            default:
+                console.log("何も裏返せない");
+                return;
+        }
     }
 }
